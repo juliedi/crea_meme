@@ -26,7 +26,7 @@ switch ($route) {
 
 /*    case ('preg_match('#film/[0-9]#',$route) ? true : false'):
         $id = $route[5];
-        include("controllers/filmController.php");
+        include("controllers/imageController.php");
         break;
 */
    default:
