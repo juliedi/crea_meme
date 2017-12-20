@@ -48,26 +48,44 @@
             <div id="carre6"></div>
           </div>          
         </div> 
+
       <div class="col-md-7">
         <h2 class="my-4">Création de votre mème</h2>
       </div>
+
       <hr>     
+
       <div class="col-md-7">
         <div id="meme_crea"></div>
       </div> 
+
       <div class="col-md-5">
         <!-- les 6 mèmes dispo-->
-        <h3>Blablabla</h3>
-        <div class="drn_memes_2">
-          <div id="carre1_1"></div>
-          <div id="carre2_2"></div>
-          <div id="carre3_3"></div>
+        <h3>Blablabla</h3>        
+        <div class="petite_image">
+          <div class="minipic">
+            <a href="#" id="duo" onclick="afficherImage(this.id)"><img src="views/duo.jpg" alt="blabla"></a>
+          </div> 
+          <div class="minipic">
+            <a href="#" id="yoann" onclick="afficherImage(this.id)"><img src="views/yoann.jpg"></a>
+          </div> 
+          <div class="minipic">
+            <a href="#" id="yoann_julie" onclick="afficherImage(this.id)"><img src="views/yoann_julie.jpg"></a>
+          </div>                                      
         </div>  
-        <div class="drn_memes_2">
-          <div id="carre4_4"></div>
-          <div id="carre5_5"></div>
-          <div id="carre6_6"></div>
-        </div>
+
+        <div class="minipic">
+          <div class="minipic">
+            <a href="#" id="quentin" onclick="afficherImage(this.id)"><img src="views/quentin.jpg"></a>
+          </div> 
+          <div class="minipic">
+            <a href="#" id="really" onclick="afficherImage(this.id)"><img src="views/really.jpg"></a>
+          </div>    
+          <div class="minipic">
+            <a href="#" id="3" onclick="afficherImage(this.id)"><img src="views/3.jpg"></a> 
+          </div>                                    
+        </div> 
+
         <form action="upload.php" method="post" enctype="multipart/form-data">    
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="hidden" name="MAX_FILE_SIZE" value="100000">
@@ -75,8 +93,7 @@
         </form>
       </div>
 
-      </div>            
-     
+      </div>    
     </div>
     <!-- /.container -->
 
@@ -91,6 +108,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="views/agrandissement.js"></script>
 
   </body>
 
