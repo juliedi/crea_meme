@@ -19,13 +19,4 @@ $lii = $bdd->lastInsertId();
 
 $id = $lii;
 
-$reponse = $bdd->query('SELECT * FROM upload WHERE id=' . $id);
-echo "<hr>";
-while ($donnees = $reponse->fetch())
-{
-	echo $donnees['nom_stockage'] . "<hr>";
-}
-
-echo "<img src='" . $nom_stockage . "'/>"
-
 ?>
