@@ -58,32 +58,22 @@
       <div class="col-md-7">
         <div id="meme_crea"></div>
       </div> 
-
-      <div class="col-md-5">
+      <?php 
+      include("afficher_image.php")
+      ?>
+      <div class="col-md-5-4">
         <!-- les 6 mèmes dispo-->
-        <h3>Blablabla</h3>        
+        <h3>Propositions d'images</h3>        
         <div class="petite_image">
-          <div class="minipic">
-            <a href="#" id="duo" onclick="afficherImage(this.id)"><img src="views/duo.jpg" alt="blabla"></a>
-          </div> 
-          <div class="minipic">
-            <a href="#" id="yoann" onclick="afficherImage(this.id)"><img src="views/yoann.jpg"></a>
-          </div> 
-          <div class="minipic">
-            <a href="#" id="yoann_julie" onclick="afficherImage(this.id)"><img src="views/yoann_julie.jpg"></a>
-          </div>                                      
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(1) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(2) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(3) ?></div>          
         </div>  
 
-        <div class="minipic">
-          <div class="minipic">
-            <a href="#" id="quentin" onclick="afficherImage(this.id)"><img src="views/quentin.jpg"></a>
-          </div> 
-          <div class="minipic">
-            <a href="#" id="really" onclick="afficherImage(this.id)"><img src="views/really.jpg"></a>
-          </div>    
-          <div class="minipic">
-            <a href="#" id="3" onclick="afficherImage(this.id)"><img src="views/3.jpg"></a> 
-          </div>                                    
+        <div class="petite_image">
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(4) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(5) ?></div>    
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(6) ?></div>         
         </div> 
 
         <form action="upload.php" method="post" enctype="multipart/form-data">    
