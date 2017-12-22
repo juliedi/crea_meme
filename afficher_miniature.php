@@ -40,4 +40,21 @@ function afficher_chemin($id) {
     }
     echo $nom_stockage;
 }
+function get_chemin($id) {
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=memegenerator;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
+            die('Erreur : '.$e->getMessage());
+    }
+    $reponse = $bdd->query('SELECT * FROM upload WHERE id=' . $id);
+    while ($donnees = $reponse->fetch())
+    {
+        //echo $donnees['nom_stockage'] . "<hr>";
+        $nom_stockage = $donnees['nom_stockage'];
+    }
+    return $nom_stockage;
+}
 ?>

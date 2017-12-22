@@ -36,7 +36,13 @@
       <div class="row">
         <div class="col-md-7">
           <div id="meme_crea">
-          <img id="imagemodifiable" src="<?php afficher_chemin(1) ?>">
+          <?php 
+            if (isset($lastID)) {
+              echo '<img id="imagemodifiable" src="'.get_chemin($lastID).'">';
+            } else {
+              echo '<img id="imagemodifiable" src="'.get_chemin(1).'">';
+            }
+            ?>
           </div>
         </div> 
 
