@@ -20,10 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Mème Générateur</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>        
+        <a class="navbar-brand" href="#">Mème Générateur</a>             
       </div>
     </nav>
 
@@ -59,21 +56,21 @@
         <div id="meme_crea"></div>
       </div> 
       <?php 
-      include("afficher_image.php")
+      include("afficher_miniature.php")
       ?>
       <div class="col-md-5-4">
         <!-- les 6 mèmes dispo-->
         <h3>Propositions d'images</h3>        
         <div class="petite_image">
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(1) ?></div> 
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(2) ?></div> 
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(3) ?></div>          
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(1) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(2) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(3) ?></div>          
         </div>  
 
         <div class="petite_image">
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(4) ?></div> 
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(5) ?></div>    
-          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_image(6) ?></div>         
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(4) ?></div> 
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(5) ?></div>    
+          <div class="minipic" id="mini" onclick="afficherImage(this.id)"><?php afficher_miniature(6) ?></div>         
         </div> 
 
         <form action="upload.php" method="post" enctype="multipart/form-data">    
