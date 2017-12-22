@@ -18,5 +18,4 @@ $req = $bdd->query("INSERT INTO upload(nom_stockage, nom_initial, description) V
 $lii = $bdd->lastInsertId();
 
 $id = $lii;
-
 ?>

@@ -1,7 +1,6 @@
 <?php
 
 $description = $_POST["description"];
-
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -48,7 +47,14 @@ if ($uploadOk == 0) {
         $resultat = move_uploaded_file($_FILES['fileToUpload']['tmp_name'],$nom);
         if ($resultat){
             echo "Transfert réussi" ;
-            include("connexion.php");
+            include("connexion.php"); ?>
+            <form action="text_on_meme.php" method="post">
+            <input type="hidden" name="cheminimage" value="<?=$nom?>">
+            <input type="text" name="toptext">
+            <input type="text" name="bottomtext">
+            <input type="submit" value="Voir le résultat">
+            </form>
+            <?php
         }
     } else {
         echo "Sorry, there was an error uploading your file.";

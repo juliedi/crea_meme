@@ -16,45 +16,47 @@
   </head>
 
   <body>
-
+    <!--<php include("")?>-->
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Mème Générateur</a>             
+        <a class="navbar-brand" href="#">Mème Générateur</a>
       </div>
     </nav>
 
-    <!-- Page Content -->
     <div class="container">     
-      <!-- Page Heading -->
+      <!--Les 6 derniers mèmes créés--> 
       <h1 class="my-4">Mèmes -
-        <small>Les dernièrs créer</small>
+        <small>Les derniers créés</small>
       </h1>  
       <hr>
       <div class="row">
         <div class="col-md-7-5">
-        <!--Les 6 derniers mèmes creer-->     
+      <!--Ligne 1-->      
           <div class="drn_memes">
             <div id="carre1"></div>
             <div id="carre2"></div>
             <div id="carre3"></div>
           </div>  
+      <!--Ligne 2-->
           <div class="drn_memes">
             <div id="carre4"></div>
             <div id="carre5"></div>
             <div id="carre6"></div>
-          </div>          
-        </div> 
+          </div>
+        </div>          
+      </div> 
 
       <div class="col-md-7">
         <h2 class="my-4">Création de votre mème</h2>
       </div>
-
-      <hr>     
-
+      <!--image du mème-->
       <div class="col-md-7">
-        <div id="meme_crea"></div>
-      </div> 
+        <div id="meme_crea">
+          <img src="<?=($meme['nom_stockage'])?>" alt="">
+        </div>
+      </div>  
       <?php 
       include("afficher_miniature.php")
       ?>
@@ -78,10 +80,16 @@
           <input type="hidden" name="MAX_FILE_SIZE" value="100000">
           <input type="submit" name="envoyer" value="Envoyer le fichier">
         </form>
+        <hr>
+        <form action="text_on_meme.php" method="post">
+        <input type="hidden" name="cheminimage">
+        <input type="text" name="top">
+          <input type="text" name="bottom">
+          <input type="submit" value="Voir le résultat">
+        </form>
       </div>
-
-      </div>    
     </div>
+  </div>
     <!-- /.container -->
 
     <!-- Footer -->
