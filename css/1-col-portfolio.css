@@ -33,6 +33,11 @@ body {
 	display: flex;
 	margin-left: 150px;
 }
+
+#creameme {
+	display: flex;
+}
+
 .formulaire_crea{
 	margin-top: 300px;
 }
@@ -68,4 +73,9 @@ img{
 }
 .petite_image{
 	display: flex;	
+}
+
+footer{
+	margin-top:186px;
+	margin-bottom: 0px; 
 }
